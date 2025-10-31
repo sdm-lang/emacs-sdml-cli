@@ -30,7 +30,7 @@ A number of the tools provided by the SDML command-line tool are exposed as
 Emacs commands. The following image shows two tools in use, the module
 dependency tree and the validation tool.
 
-![Tool Commands](./images/emacs-tools.png)
+![Tool Commands](https://github.com/sdm-lang/emacs-sdml-mode/blob/main/images/emacs-tools.png)
 
 ### Dependency Tree
 
