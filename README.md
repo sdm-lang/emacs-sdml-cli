@@ -1,49 +1,30 @@
-# SDML Mode for Emacs
+# SDML CLI integration for Emacs
 
 ![SDML Logo Text](https://raw.githubusercontent.com/sdm-lang/.github/main/profile/horizontal-text.svg)
 
-This package provides an Emacs tree-sitter based major mode for SDML - the
-[Simple Domain Modeling Language](https://github.com/sdm-lang/tree-sitter-sdml).
+This package provides Emacs integration with the
+[Simple Domain Modeling Language](https://github.com/sdm-lang/tree-sitter-sdml)
+command-line (CLI) tool.
 
 [![License-Apache_2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Eask Workflow](https://github.com/sdm-lang/emacs-sdml-ts-mode/actions/workflows/emacs-eask.yml/badge.svg)](https://github.com/sdm-lang/emacs-sdml-ts-mode/actions/workflows/emacs-eask.yml)
-[![MELPA](https://melpa.org/packages/sdml-ts-mode-badge.svg)](https://melpa.org/#/sdml-ts-mode)
-[![Stargazer Count](https://img.shields.io/github/stars/sdm-lang/emacs-sdml-ts-mode.svg)](https://github.com/sdm-lang/emacs-sdml-ts-mode/stargazers)
+[![Eask Workflow](https://github.com/sdm-lang/emacs-sdml-cli/actions/workflows/emacs-eask.yml/badge.svg)](https://github.com/sdm-lang/emacs-sdml-cli/actions/workflows/emacs-eask.yml)
+[![MELPA](https://melpa.org/packages/sdml-cli-badge.svg)](https://melpa.org/#/sdml-cli)
+[![Stargazer Count](https://img.shields.io/github/stars/sdm-lang/emacs-sdml-cli.svg)](https://github.com/sdm-lang/emacs-sdml-cli/stargazers)
 
 ## Installing
 
 Install is easiest from MELPA, here's how with `use-package`.
 
 ```elisp
-(use-package sdml-ts-mode)
+(use-package sdml-cli)
 ;; or
-(use-package sdml-ts-mode
-  :vc (:url "https://github.com/sdm-lang/emacs-sdml-ts-mode"))
+(use-package sdml-cli
+  :vc (:url "https://github.com/sdm-lang/emacs-sdml-cli"))
 ```
 
-Or, interactively; `M-x package-install RET sdml-ts-mode RET`
+Or, interactively; `M-x package-install RET sdml-cli RET`
 
 ## Usage
-
-Once installed the major mode should be used for any file ending in `.sdm` or
-`.sdml` with highlighting and indentation support.
-
-## Ctags Support
-
-Using [Universal Ctags](https://ctags.io) and the [sdml-ctags](https://github.com/sdm-lang/sdml-ctags) package provides an identifier tagging
-solution for SDML source. The `sdml-ts-mode-ctags-mode` will determine if
-[`company-mode`](https://company-mode.github.io/) installed and add SDML as a supported tag backend. Additionally,
-this minor mode provides a command to re-create the project's tag file. The
-image below shows company used as the completion UI for type completion when
-editing.
-
-![Completion](./images/emacs-completion.png)
-
-Command `sdml-ts-mode-ctags-generate` has the default binding `C-c C-s T`. It uses
-the variables `sdml-ts-mode-ctags-command` and `sdml-ts-mode-ctags-output-file-name`
-to generate the tag file.
-
-## Tool Commands
 
 A number of the tools provided by the SDML command-line tool are exposed as
 Emacs commands. The following image shows two tools in use, the module
@@ -53,7 +34,7 @@ dependency tree and the validation tool.
 
 ### Dependency Tree
 
-* Command `sdml-ts-mode-current-buffer-dependency-tree` has the default binding
+* Command `sdml-cli-current-buffer-dependency-tree` has the default binding
   `C-c C-s t`.
 * The command will prompt for the maximum depth of the tree where 0 means
   unbounded. This is a command prefix and can therefore be specified with the
@@ -67,34 +48,18 @@ If running under a `window-sytem` it is also possible to display the current
 buffer's dependencies as a directed graph. The tool will generate an SVG and
 display in a read-only window.
 
-* Command `sdml-ts-mode-current-buffer-dependency-graph` has the default binding
+* Command `sdml-cli-current-buffer-dependency-graph` has the default binding
   `C-c C-s M-t`.
 
 ### Full Validation
 
-* Command `sdml-ts-mode-validate-current-buffer` has the default binding `C-c C-s
+* Command `sdml-cli-validate-current-buffer` has the default binding `C-c C-s
   v`.
-* Command `sdml-ts-mode-validate-file` has the default binding `C-c C-s M-v`.
-* The variable `sdml-ts-mode-validation-level` denotes the level of messages
+* Command `sdml-cli-validate-file` has the default binding `C-c C-s M-v`.
+* The variable `sdml-cli-validation-level` denotes the level of messages
   produced by the validator, with a default of `warnings`.
 * The output uses the standard `compilation-mode` with all the common bindings are
   available.
-
-### Abbreviations and Skeletons
-
-TBD
-
-## Prettify Symbol
-
-TBD
-
-### Default Key Bindings
-
-TBD
-
-## Add-Ons
-
-TBD
 
 ## License(s)
 
@@ -119,7 +84,7 @@ licenses:
 > limitations under the License.
 > ```
 
-See the enclosed file [LICENSE-Apache](https://github.com/sdm-lang/emacs-sdml-ts-mode/blob/main/LICENSE-APACHE).
+See the enclosed file [LICENSE-Apache](https://github.com/sdm-lang/emacs-sdml-cli/blob/main/LICENSE-APACHE).
 
 ### MIT
 
@@ -144,7 +109,7 @@ See the enclosed file [LICENSE-Apache](https://github.com/sdm-lang/emacs-sdml-ts
 > SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 > ```
 
-See the enclosed file [LICENSE-MIT](https://github.com/sdm-lang/emacs-sdml-ts-mode/blob/main/LICENSE-MIT).
+See the enclosed file [LICENSE-MIT](https://github.com/sdm-lang/emacs-sdml-cli/blob/main/LICENSE-MIT).
 
 ### Contributions
 
