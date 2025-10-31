@@ -7,22 +7,18 @@ This package provides Emacs integration with the
 command-line (CLI) tool.
 
 [![License-Apache_2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License-MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Eask Workflow](https://github.com/sdm-lang/emacs-sdml-cli/actions/workflows/emacs-eask.yml/badge.svg)](https://github.com/sdm-lang/emacs-sdml-cli/actions/workflows/emacs-eask.yml)
-[![MELPA](https://melpa.org/packages/sdml-cli-badge.svg)](https://melpa.org/#/sdml-cli)
 [![Stargazer Count](https://img.shields.io/github/stars/sdm-lang/emacs-sdml-cli.svg)](https://github.com/sdm-lang/emacs-sdml-cli/stargazers)
 
 ## Installing
 
-Install is easiest from MELPA, here's how with `use-package`.
+Install is easiest with `use-package`.
 
 ```elisp
-(use-package sdml-cli)
-;; or
 (use-package sdml-cli
   :vc (:url "https://github.com/sdm-lang/emacs-sdml-cli"))
 ```
-
-Or, interactively; `M-x package-install RET sdml-cli RET`
 
 ## Usage
 
