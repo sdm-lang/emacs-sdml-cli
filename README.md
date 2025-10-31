@@ -28,10 +28,19 @@ dependency tree and the validation tool.
 
 ![Tool Commands](https://github.com/sdm-lang/emacs-sdml-mode/blob/main/images/emacs-tools.png)
 
+### Full Validation
+
+* Command `sdml-cli-validate-current-buffer` has the default binding `C-c v`.
+* Command `sdml-cli-validate-file` has the default binding `C-c C-f v`.
+* The variable `sdml-cli-validation-level` denotes the level of messages
+  produced by the validator, with a default of `warnings`.
+* The output uses the standard `compilation-mode` with all the common bindings
+  available.
+
 ### Dependency Tree
 
 * Command `sdml-cli-current-buffer-dependency-tree` has the default binding
-  `C-c C-s t`.
+  `C-c d t`.
 * The command will prompt for the maximum depth of the tree where 0 means
   unbounded. This is a command prefix and can therefore be specified with the
   usual `C-u` binding.
@@ -45,17 +54,7 @@ buffer's dependencies as a directed graph. The tool will generate an SVG and
 display in a read-only window.
 
 * Command `sdml-cli-current-buffer-dependency-graph` has the default binding
-  `C-c C-s M-t`.
-
-### Full Validation
-
-* Command `sdml-cli-validate-current-buffer` has the default binding `C-c C-s
-  v`.
-* Command `sdml-cli-validate-file` has the default binding `C-c C-s M-v`.
-* The variable `sdml-cli-validation-level` denotes the level of messages
-  produced by the validator, with a default of `warnings`.
-* The output uses the standard `compilation-mode` with all the common bindings are
-  available.
+  `C-c d g`.
 
 ## License(s)
 
